@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic HTML Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header, main, aside, footer {
+            padding: 20px;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            display: flex;
+            padding: 20px;
+        }
+        article {
+            flex: 3;
+        }
+        aside {
+            flex: 1;
+            background-color: #f4f4f4;
+            padding: 15px;
+            margin-left: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            margin: 10px 0;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Semantic HTML-Assignment-6</h1>
+    <header>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <h1>Article Heading</h1>
+            <p>This is the first paragraph of the article. It contains some interesting information.</p>
+            <p>This is the second paragraph of the article. It provides additional details on the topic.</p>
+        </article>
+        <aside>
+            <h2>Related Links</h2>
+            <ul>
+                <li><a href="https://www.bing.com/search?q=geeksforgeeks&gs_lcrp=EgZjaHJvbWUqBggBEEUYOzIGCAAQRRg5MgYIARBFGDsyBggCEC4YQDIGCAMQABhAMgYIBBAAGEAyBggFEAAYQDIGCAYQLhhAMgYIBxBFGDwyBggIEEUYPdIBCDQ0MjNqMGoxqAIAsAIA&FORM=ANAB01&adppc=EDGEESS&PC=EDGEDB">GeeksForGeeks</a></li>
+                <li><a href="https://www.bing.com/search?q=example&filters=ufn%3a%22Example+(musician)%22+sid%3a%229ab085bb-9d7a-fa6a-2444-a057ef2e9213%22&asbe=CT&qs=MB&pq=example&sc=10-7&cvid=A2DC5545F8604AB385C3C28D2D146FD6&FORM=QBRE&sp=1&ghc=1&lq=0">Example</a></li>
+                <li><a href="https://www.bing.com/search?q=w3schools&filters=ufn%3a%22W3Schools%22+sid%3a%22895f65dc-20b1-1b52-141a-7e440b8718f0%22&asbe=SS&qs=MB&pq=w3schol&sc=10-7&cvid=A5856DCC027C4CB781DED590711E34E8&FORM=QBRE&sp=1&ghc=1&lq=0">W3Schools</a></li>
+            </ul>
+        </aside>
+    </main>
+    <footer>
+        <p>Contact us at:</p>
+        <p>Email: info@example.com</p>
+        <p>Phone: (123) 456-7890</p>
+        <p>&copy; 2024 Your Company</p>
+    </footer>
+</body>
+</html>
+
