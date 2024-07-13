@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Variables Example</title>
+<style>
+    /* Define CSS variables */
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #e74c3c;
+  --text-color: #333;
+  --font-size-base: 16px;
+  --spacing: 10px;
+}
+
+/* Basic styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: var(--text-color);
+}
+
+.container {
+  width: 80%;
+  max-width: 600px;
+  background-color: #fff;
+  padding: var(--spacing);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: var(--primary-color);
+}
+
+p {
+  margin-bottom: var(--spacing);
+}
+
+form {
+  margin-top: var(--spacing);
+}
+
+.form-group {
+  margin-bottom: calc(var(--spacing) * 1.5);
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: calc(var(--spacing) / 2);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+button {
+  width: 100%;
+  padding: var(--spacing);
+  font-size: var(--font-size-base);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* Ensures padding and border are included in width */
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: calc(var(--spacing) / 2);
+  margin-left: calc(var(--spacing) / 2);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Focus styles */
+input:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+/* Validation styles */
+input:invalid {
+  border-color: var(--secondary-color);
+}
+
+input:invalid:focus {
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 5px rgba(231, 76, 60, 0.5);
+}
+
+input:valid {
+  border-color: var(--primary-color);
+}
+
+input:valid:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px rgba(46, 204, 113, 0.5);
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Welcome to CSS Variables Example</h1>
+  
+  <p>This is a demonstration of using CSS variables for maintaining consistency and ease of maintenance.</p>
+  
+  <form>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    
+    <div class="form-group">
+      <label>Gender:</label><br>
+      <input type="radio" id="male" name="gender" value="male" required>
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female" required>
+      <label for="female">Female</label>
+    </div>
+    
+    <div class="form-group">
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" required>
+    </div>
+    
+    <div class="form-group">
+      <label for="country">Country:</label>
+      <select id="country" name="country" required>
+        <option value="">Select Country</option>
+        <option value="usa">USA</option>
+        <option value="canada">Canada</option>
+        <option value="uk">UK</option>
+        <option value="australia">Australia</option>
+      </select>
+    </div>
+    
+    <div class="form-group">
+      <label for="subscribe">Subscribe to newsletter:</label>
+      <input type="checkbox" id="subscribe" name="subscribe">
+    </div>
+    
+    <button type="submit">Submit</button>
+  </form>
+  
+</div>
+
+</body>
+</html>

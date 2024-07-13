@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pseudo-classes and Pseudo-elements Demo</title>
+<style>
+    /* Basic styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: #3498db;
+  color: #fff;
+  font-size: 24px;
+  line-height: 200px;
+  margin: 20px;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+/* Pseudo-classes */
+.box:hover {
+  background-color: #2980b9;
+}
+
+.box:active {
+  background-color: #2c3e50;
+}
+
+.box:focus {
+  outline: 2px solid #fff;
+}
+
+/* Pseudo-elements */
+.box::before {
+  content: 'Before';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+.box::after {
+  content: 'After';
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* nth-child selector */
+.box:nth-child(2) {
+  background-color: #e74c3c;
+}
+
+.box:nth-child(2)::before {
+  content: 'Special';
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+}
+
+.box:nth-child(2)::after {
+  content: 'Element';
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Interactive Elements Demo</h1>
+  <div class="box" id="box1">Box 1</div>
+  <div class="box" id="box2">Box 2</div>
+  <div class="box" id="box3">Box 3</div>
+</div>
+
+</body>
+</html>

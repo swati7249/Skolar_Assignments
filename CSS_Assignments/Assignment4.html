@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model Demo</title>
+    <style>
+        /* Global styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+h1.title {
+    color: #333333;
+    text-align: center;
+}
+
+h2 {
+    color: #444444;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+/* Box Model Examples */
+.box {
+    margin: 20px 0;
+    padding: 20px;
+    border: 2px solid #000000;
+    background-color: #e0e0e0;
+    text-align: center;
+    width: 200px;
+    box-sizing: content-box;
+}
+
+.content-box {
+    box-sizing: content-box;
+}
+
+.border-box {
+    box-sizing: border-box;
+}
+
+/* Padding Example */
+.padding-box {
+    padding: 40px;
+    background-color: #c0c0ff;
+}
+
+/* Border Example */
+.border-box {
+    border: 10px solid #ff6347;
+}
+
+/* Margin Example */
+.margin-box {
+    margin: 20px;
+    background-color: #ffc0cb;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">CSS Box Model Demo</h1>
+        
+        <section class="box-model">
+            <h2>Box Model Examples</h2>
+            <div class="box content-box">
+                <p>Content Box</p>
+            </div>
+            <div class="box border-box">
+                <p>Border Box</p>
+            </div>
+        </section>
+
+        <section class="padding-example">
+            <h2>Padding Example</h2>
+            <div class="box padding-box">
+                <p>Padding</p>
+            </div>
+        </section>
+        
+        <section class="border-example">
+            <h2>Border Example</h2>
+            <div class="box border-box">
+                <p>Border</p>
+            </div>
+        </section>
+        
+        <section class="margin-example">
+            <h2>Margin Example</h2>
+            <div class="box margin-box">
+                <p>Margin</p>
+            </div>
+            <div class="box margin-box">
+                <p>Margin</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

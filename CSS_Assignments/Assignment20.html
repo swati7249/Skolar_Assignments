@@ -1,0 +1,170 @@
+//Grid System
+//css
+<style>
+  /* Grid Container */
+  .container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  /* Grid Rows */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+
+  /* Grid Columns */
+  .col {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  @media (min-width: 576px) {
+    .col-sm {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .col-md {
+      flex: 0 0 33.333333%;
+      max-width: 33.333333%;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .col-lg {
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .col-xl {
+      flex: 0 0 20%;
+      max-width: 20%;
+    }
+  }
+
+  /*Common UI Components
+Buttons*/
+
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+
+  .button:hover {
+    background-color: #f0f0f0;
+  }
+
+  /*Cards*/
+
+  .card {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  /*Forms*/
+  .form-control {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+
+  .input-group {
+    margin-bottom: 15px;
+  }
+
+  .input-group-addon {
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+  }
+
+  /*Utility Classes*/
+
+
+  .text-center {
+    text-align: center;
+  }
+
+  .mt-10 {
+    margin-top: 10px;
+  }
+
+  .p-20 {
+    padding: 20px;
+  }
+
+  .hide {
+    display: none;
+  }
+</style>
+Documentation and Examples
+Grid Example
+html
+Copy code
+<div class="container">
+  <div class="row">
+    <div class="col col-sm col-md col-lg col-xl">
+      <!-- Content here -->
+    </div>
+    <div class="col col-sm col-md col-lg col-xl">
+      <!-- Content here -->
+    </div>
+  </div>
+</div>
+/*Documentations and */
+Button
+<a href="#" class="button">Click me</a>
+Card Example
+html
+Copy code
+<div class="card">
+  <h3>Card Title</h3>
+  <p>Card content goes here.</p>
+</div>
+
+
+Form Example
+
+<form>
+  <div class="input-group">
+    <span class="input-group-addon">Label</span>
+    <input type="text" class="form-control">
+  </div>
+  <button type="submit" class="button">Submit</button>
+</form>
+
+Utility Class
+<div class="text-center mt-10 p-20">
+  <h2>Centered Text with Margin and Padding</h2>
+</div>

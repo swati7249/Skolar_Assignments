@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transforms Demo</title>
+    <style>
+        /* Reset some default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.box:hover {
+    transform: scale(1.1);
+}
+
+#box1 {
+    background-color: #3498db;
+    color: #fff;
+}
+
+#box2 {
+    background-color: #2ecc71;
+    color: #fff;
+}
+
+#box3 {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+#box4 {
+    background-color: #f39c12;
+    color: #fff;
+}
+
+#box5 {
+    background-color: #9b59b6;
+    color: #fff;
+}
+
+#box1:hover {
+    transform: translate(20px, 20px);
+}
+
+#box2:hover {
+    transform: rotate(45deg);
+}
+
+#box3:hover {
+    transform: scale(1.5);
+}
+
+#box4:hover {
+    transform: skew(20deg, 10deg);
+}
+
+#box5:hover {
+    transform: rotate(45deg) scale(1.2) skew(-10deg, 5deg) translate(20px, 20px);
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">Translate</div>
+        <div class="box" id="box2">Rotate</div>
+        <div class="box" id="box3">Scale</div>
+        <div class="box" id="box4">Skew</div>
+        <div class="box" id="box5">Complex Transform</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Webpage</title>
+    <style>
+        /* Global styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+/* Base styles for grid container */
+.header, .nav, .main, .footer {
+    width: 90%;
+    max-width: 1200px;
+    margin: 10px 0;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+/* Default font-size */
+body {
+    font-size: 16px;
+}
+
+/* Base styles for grid items */
+.header {
+    background-color: #007BFF;
+    color: #ffffff;
+    text-align: center;
+}
+
+.nav {
+    background-color: #6c757d;
+    color: #ffffff;
+    text-align: center;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    background-color: #28a745;
+    color: #ffffff;
+    margin-bottom: 10px;
+    flex: 2;
+    text-align: center;
+}
+
+.sidebar {
+    background-color: #ffc107;
+    color: #ffffff;
+    flex: 1;
+    text-align: center;
+}
+
+.footer {
+    background-color: #343a40;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Mobile Styles (up to 600px) */
+@media (max-width: 600px) {
+    .main {
+        flex-direction: column;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .content {
+        font-size: 14px;
+    }
+}
+
+/* Tablet Styles (601px to 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+    .main {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .content, .sidebar {
+        margin-bottom: 0;
+    }
+
+    .content {
+        font-size: 18px;
+    }
+
+    .nav {
+        font-size: 14px;
+    }
+}
+
+/* Desktop Styles (901px and up) */
+@media (min-width: 901px) {
+    .main {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .content, .sidebar {
+        margin-bottom: 0;
+    }
+
+    .content {
+        font-size: 20px;
+    }
+
+    .nav {
+        font-size: 16px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header class="header">Header</header>
+    <nav class="nav">Navigation</nav>
+    <main class="main">
+        <section class="content">Content</section>
+        <aside class="sidebar">Sidebar</aside>
+    </main>
+    <footer class="footer">Footer</footer>
+</body>
+</html>

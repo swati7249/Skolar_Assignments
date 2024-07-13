@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transitions Demo</title>
+    <style>
+        /* Reset some default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition-property: color, background-color, width, height;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.box:hover {
+    transform: scale(1.1);
+}
+
+#box1 {
+    background-color: #3498db;
+    color: #fff;
+}
+
+#box2 {
+    background-color: #2ecc71;
+    color: #fff;
+}
+
+#box3 {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+#box4 {
+    background-color: #f39c12;
+    color: #fff;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">Color Transition</div>
+        <div class="box" id="box2">Background Transition</div>
+        <div class="box" id="box3">Width Transition</div>
+        <div class="box" id="box4">Height Transition</div>
+    </div>
+
+    
+</body>
+</html>

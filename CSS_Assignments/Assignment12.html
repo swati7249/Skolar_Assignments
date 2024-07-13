@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS z-index Demo</title>
+   <style>
+    /* Reset some default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.red {
+    background-color: rgba(231, 76, 60, 0.8);
+    z-index: 1;
+    top: 50px;
+    left: 50px;
+}
+
+.blue {
+    background-color: rgba(52, 152, 219, 0.8);
+    z-index: 2;
+    top: 100px;
+    left: 100px;
+}
+
+.green {
+    background-color: rgba(46, 204, 113, 0.8);
+    z-index: 3;
+    top: 150px;
+    left: 150px;
+}
+
+.yellow {
+    background-color: rgba(241, 196, 15, 0.8);
+    z-index: 4;
+    top: 200px;
+    left: 200px;
+}
+
+   </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box red">Red Box (z-index: 1)</div>
+        <div class="box blue">Blue Box (z-index: 2)</div>
+        <div class="box green">Green Box (z-index: 3)</div>
+        <div class="box yellow">Yellow Box (z-index: 4)</div>
+    </div>
+</body>
+</html>

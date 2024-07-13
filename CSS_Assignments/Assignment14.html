@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations Demo</title>
+    <style>
+      
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#box1 {
+    background-color: #3498db;
+    color: #fff;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+#box2 {
+    background-color: #2ecc71;
+    color: #fff;
+    animation: slide 2s ease-in-out infinite;
+}
+
+#box3 {
+    background-color: #e74c3c;
+    color: #fff;
+    animation: rotate 2s linear infinite;
+}
+
+#box4 {
+    background-color: #f39c12;
+    color: #fff;
+    animation: colorChange 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(50px); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes colorChange {
+    0%, 100% { background-color: #f39c12; }
+    50% { background-color: #e74c3c; }
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">Pulse Animation</div>
+        <div class="box" id="box2">Slide Animation</div>
+        <div class="box" id="box3">Rotate Animation</div>
+        <div class="box" id="box4">Color Change Animation</div>
+    </div>
+
+   
+</body>
+</html>

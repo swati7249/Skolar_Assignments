@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Images</title>
+    <style>
+        /* Global styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.header, .main, .footer {
+    width: 90%;
+    max-width: 1200px;
+    margin: 10px 0;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.image-section {
+    width: 100%;
+}
+
+.responsive-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile Styles (up to 600px) */
+@media (max-width: 600px) {
+    .main {
+        padding: 10px;
+    }
+
+    .header, .footer {
+        padding: 10px;
+    }
+}
+
+/* Tablet Styles (601px to 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+    .main {
+        padding: 15px;
+    }
+
+    .header, .footer {
+        padding: 15px;
+    }
+}
+
+/* Desktop Styles (901px and up) */
+@media (min-width: 901px) {
+    .main {
+        padding: 20px;
+    }
+
+    .header, .footer {
+        padding: 20px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header class="header">Responsive Images Example</header>
+    <main class="main">
+        <section class="image-section">
+            <h2>Beautiful Landscape</h2>
+            <img
+                src="download.jpeg"
+                srcset="images/landscape-small.jpg 600w,
+                        images/landscape-medium.jpg 900w,
+                        images/landscape-large.jpg 1200w"
+                sizes="(max-width: 600px) 100vw,
+                       (max-width: 900px) 50vw,
+                       33vw"
+                alt="Beautiful landscape with mountains and a lake"
+                class="responsive-image"
+            >
+        </section>
+    </main>
+    <footer class="footer">Footer</footer>
+</body>
+</html>

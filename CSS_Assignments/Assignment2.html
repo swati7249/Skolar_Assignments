@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Color Properties Demo</title>
+   <style>
+    /* Global styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+h1.title {
+    color: #333333;
+    text-align: center;
+}
+
+p.description {
+    color: #666666;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Color Example */
+.color-box {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.color-text {
+    color: navy; /* Named color */
+}
+
+.hex-color {
+    color: #ff6347; /* Hexadecimal color */
+}
+
+/* Background Example */
+.background-box {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.background-text {
+    background-color: #66cdaa; /* Solid background color */
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.gradient-text {
+    background: linear-gradient(45deg, #ff6347, #ffa07a); /* Gradient background */
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+/* Background Image Example */
+.image-box {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.image-text {
+    background-image: url('https://via.placeholder.com/150'); /* Background image */
+    background-repeat: no-repeat; /* Prevents repeating the image */
+    background-position: center; /* Centers the image */
+    padding: 150px 0; /* Adjusts padding for visual effect */
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+   </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">CSS Color Properties Demo</h1>
+        <p class="description">This webpage demonstrates various CSS color properties including <code>color</code>, <code>background-color</code>, and gradients. It also showcases background properties like <code>background-image</code>, <code>background-repeat</code>, and <code>background-position</code>.</p>
+        <div class="color-box">
+            <h2>Color Example</h2>
+            <p>This text uses <span class="color-text">named color</span> and <span class="hex-color">#hexadecimal color</span>.</p>
+        </div>
+        <div class="background-box">
+            <h2>Background Example</h2>
+            <p>This box uses a <span class="background-text">solid background color</span> and a <span class="gradient-text">gradient background</span>.</p>
+        </div>
+        <div class="image-box">
+            <h2>Background Image Example</h2>
+            <p>This box uses a <span class="image-text">background image</span> with different properties like repeat and position.</p>
+        </div>
+    </div>
+</body>
+</html>

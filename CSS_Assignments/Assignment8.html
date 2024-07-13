@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complex CSS Grid Layout</title>
+    <style>
+        /* Global styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+/* Outer grid container styling */
+.outer-grid-container {
+    display: grid;
+    grid-template-rows: 100px 1fr 100px;
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-areas:
+        "header header header"
+        "nav main aside"
+        "footer footer footer";
+    grid-gap: 10px;
+    width: 90%;
+    max-width: 1200px;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+/* Grid items styling */
+.header {
+    grid-area: header;
+    background-color: #007BFF;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav {
+    grid-area: nav;
+    background-color: #6c757d;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    grid-area: main;
+    background-color: #ffffff;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "content-header"
+        "content-main"
+        "content-footer";
+    grid-gap: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.aside {
+    grid-area: aside;
+    background-color: #17a2b8;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #343a40;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Inner grid container styling */
+.inner-grid-container {
+    display: grid;
+    grid-template-rows: 100px 1fr 100px;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+        "content-header content-header"
+        "article sidebar"
+        "content-footer content-footer";
+    grid-gap: 10px;
+    height: 100%;
+}
+
+.content-header {
+    grid-area: content-header;
+    background-color: #28a745;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-main {
+    grid-area: content-main;
+    display: grid;
+    grid-template-areas:
+        "article sidebar";
+    grid-gap: 10px;
+}
+
+.article {
+    grid-area: article;
+    background-color: #ffc107;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: #17a2b8;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-footer {
+    grid-area: content-footer;
+    background-color: #6c757d;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    </style>
+</head>
+<body>
+    <div class="outer-grid-container">
+        <header class="header">Header</header>
+        <nav class="nav">Navigation</nav>
+        <main class="main">
+            <div class="inner-grid-container">
+                <section class="content-header">Content Header</section>
+                <div class="content-main">
+                    <article class="article">Article</article>
+                    <aside class="sidebar">Sidebar</aside>
+                </div>
+                <footer class="content-footer">Content Footer</footer>
+            </div>
+        </main>
+        <aside class="aside">Outer Sidebar</aside>
+        <footer class="footer">Footer</footer>
+    </div>
+</body>
+</html>
